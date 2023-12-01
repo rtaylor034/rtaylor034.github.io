@@ -1,1 +1,13 @@
-hello world!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasm or Something!</title>
+</head>
+<body>
+    <script>
+    const wasmModule = new WebAssembly.Module(await fetch('hello_world.wasm').then(response => response.arrayBuffer()));
+    </script>
+</body>
+</html>
